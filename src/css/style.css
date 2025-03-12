@@ -1,0 +1,35 @@
+@layer base {
+    :root {
+        --black: #000501;
+        --tan: #b6b57b;
+        --green: #31b28a;
+        --lightgreen: #8cdfc5;
+        --red: #ff4404;
+        --white: #ffffff;
+
+        /* font families */
+        --main: "Lato", sans-serif;
+        --heading: "Josefin Sans", sans-serif;
+        --mono: "Fira mono", monospace;
+
+        /* type scale */
+        --base-size: 1.2rem;
+        --scale: 1.25;
+        --h1: calc(var(--h2) * var(--scale));
+        --h2: calc(var(--h3) * var(--scale));
+        --h3: calc(var(--h4) * var(--scale));
+        --h4: calc(var(--h5) * var(--scale));
+        --h5: calc(var(--h6) * var(--scale));
+        --h6: var(--base-size);
+    }
+
+}
+
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    font-size: var(--base-size);
+    background-color: var(--green);
+    line-height: 1.5;
+}
