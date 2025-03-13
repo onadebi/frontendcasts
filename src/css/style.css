@@ -6,11 +6,16 @@
         --lightgreen: #8cdfc5;
         --red: #ff4404;
         --white: #ffffff;
+        --primary: cornflowerblue;
+        --offwhite: #ececec;
 
         /* font families */
         --main: "Lato", sans-serif;
         --heading: "Josefin Sans", sans-serif;
         --mono: "Fira mono", monospace;
+
+        /* font-weight */
+        --headline: 600;
 
         /* type scale */
         --base-size: 1.2rem;
@@ -25,11 +30,81 @@
 
 }
 
+@layer navigation{
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-flow: row wrap;
+        /* border: 1px solid green; */
+    }
+
+    header h1{
+        margin-top: -0.1rem;
+    }
+
+    header h1 a{
+        text-decoration: none;
+    }
+
+    header > h1 svg {
+        width: 30px;
+        fill: var(--primary);
+    }
+
+    header a:hover svg {
+        fill: green;
+    }
+
+    /* header a svg:hover {
+        fill: green;
+    } */
+    nav{
+        font-family: var(--main);
+        font-weight: var(--headline);
+        /* border: 1px solid green; */
+    }
+    ul{
+        display: flex;
+        gap: 2rem;
+        flex-flow: row wrap;/*combined <flex-direction> and <flex-wrap> */
+        list-style-type: none;
+        padding-right: 0.6rem;
+    }
+    ul > li a{
+        text-decoration: none;;
+    }
+
+    ul > li a:hover{
+        color: var(--primary);
+    }
+
+    ul li svg {
+        width: 1.5rem;
+        fill: var(--primary);
+        margin: 0px;
+    }
+
+    nav .button{
+        background-color: var(--lightgreen);
+        padding: 0.6rem 0.4rem;
+        border-radius: 6px;
+    }
+
+    @media (max-width: 820px) {
+        header{
+            justify-content: center;
+        }
+    }
+
+}
+
 body {
     font-family: var(--font-main);
     margin: 0;
     padding: 0;
     font-size: var(--base-size);
-    background-color: var(--green);
+    background-color: var(--offwhite);
     line-height: 1.5;
 }
