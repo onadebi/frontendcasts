@@ -1,0 +1,29 @@
+@layer grid{
+    .grid-container{
+        display: grid;
+        gap: 3rem 2rem;
+
+        /* grid-template-columns: repeat(4, 1fr); */
+
+        /* grid-template-columns: repeat(auto-fit, minmax(50px, 80px)); */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+    }
+
+    .grid-container div{
+        padding: 10px 15px;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .grid-container > div:nth-child(even){
+        background-color: cornflowerblue;
+    }
+    .grid-container > div:nth-child(odd){
+        background-color: #ececec;
+    }
+
+    body{
+        background-color: green;
+    }
+}
